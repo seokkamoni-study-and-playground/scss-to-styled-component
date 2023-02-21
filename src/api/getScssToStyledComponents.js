@@ -6,18 +6,19 @@ export const getScssToStyledComponents = async (scssCode) => {
     const response = await customAxios.post(
       "/engines/davinci-codex/completions",
       {
-        prompt: `${scssCode}\n 이코드를 styled-components 코드로 변환해줘`,
+        prompt: `${scssCode}\n 이 코드를 styled-components 코드로 다른 부가 설명 하지말고 styled-components 코드만으로 변환해줘`,
         temperature: 0.5,
         max_tokens: 1024,
         top_p: 1,
         frequency_penalty: 0,
         presence_penalty: 0,
-        stop: "\n",
+        stop: "\n\n\n\n",
       }
     );
 
     // API 응답 결과에서 변환된 코드 추출
     const StyledComponentCode = response.data.choices[0].text;
+
     console.log(StyledComponentCode);
 
     return StyledComponentCode;

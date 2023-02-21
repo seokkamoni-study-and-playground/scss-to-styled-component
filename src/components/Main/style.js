@@ -22,6 +22,13 @@ export const TextArea = styled.textarea`
   font-size: 14px;
 `;
 
+export const Pre = styled.pre`
+  border: 1px solid black;
+  height: 100%;
+  width: 45%;
+  font-size: 14px;
+`;
+
 export const Button = styled.button`
   height: 80px;
   width: 350px;

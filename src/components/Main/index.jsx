@@ -7,8 +7,9 @@ const Main = () => {
   const [scssCode, setSccsCode] = useState("");
   const [styledComponentsCode, setStyledComponentsCode] = useState("");
 
-  const submit = () => {
-    let styledComponents = getScssToStyledComponents(scssCode);
+  const submit = async () => {
+    const styledComponents = await getScssToStyledComponents(scssCode);
+    console.log(styledComponents);
     setStyledComponentsCode(styledComponents);
   };
 
@@ -21,7 +22,7 @@ const Main = () => {
           placeholder="scss 코드를 입력하세요."
           onChange={(e) => setSccsCode(e.target.value)}
         />
-        <S.TextArea value={styledComponentsCode} />
+        <S.Pre>{styledComponentsCode}</S.Pre>
       </S.Wrap>
       <S.Button onClick={submit}>변환</S.Button>
     </S.Container>
