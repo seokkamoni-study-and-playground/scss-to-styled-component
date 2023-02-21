@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { getScssToStyledComponents } from "../../api/getScssToStyledComponents";
+import Warning from "../Warning";
 import * as S from "./style";
 
 const Main = () => {
@@ -13,6 +14,7 @@ const Main = () => {
 
   return (
     <S.Container>
+      <Warning />
       <S.Wrap>
         <S.TextArea
           value={scssCode}
