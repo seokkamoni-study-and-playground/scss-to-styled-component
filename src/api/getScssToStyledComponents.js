@@ -17,12 +17,14 @@ export const getScssToStyledComponents = async (scssCode) => {
     );
 
     // API 응답 결과에서 변환된 코드 추출
-    const generatedCode = response.data.choices[0].text;
-    console.log(generatedCode);
+    const StyledComponentCode = response.data.choices[0].text;
+    console.log(StyledComponentCode);
 
-    return generatedCode;
+    return StyledComponentCode;
   } catch (error) {
     console.log(error);
-    console.log("에러다");
+    if (error.response.status == 500) {
+      alert("gpt 서버가 터졌다");
+    }
   }
 };
