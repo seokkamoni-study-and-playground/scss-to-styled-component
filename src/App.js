@@ -1,7 +1,13 @@
 import Main from "./components/Main";
+import GlobalStyled from "./styles/global.style";
 
 const App = () => {
-  return <Main />;
+  return (
+    <>
+      <GlobalStyled />
+      <Main />
+    </>
+  );
 };
 
 export default App;
