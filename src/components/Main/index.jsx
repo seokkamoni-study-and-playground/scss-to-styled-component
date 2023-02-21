@@ -24,7 +24,7 @@ const Main = () => {
         />
         <S.Pre>{styledComponentsCode}</S.Pre>
       </S.Wrap>
-      <S.Button onClick={submit}>변환</S.Button>
+      <S.Button onClick={submit}>코드 변환</S.Button>
     </S.Container>
   );
 };
