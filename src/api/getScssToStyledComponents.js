@@ -6,7 +6,7 @@ export const getScssToStyledComponents = async (scssCode) => {
     const response = await customAxios.post(
       "/engines/davinci-codex/completions",
       {
-        prompt: `${scssCode}\n this code please change styled-components code`,
+        prompt: `${scssCode}\n Convert SCSS to styled components`,
         temperature: 0.5,
         max_tokens: 1024,
         top_p: 1,
