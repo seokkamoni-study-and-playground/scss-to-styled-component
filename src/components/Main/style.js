@@ -40,4 +40,9 @@ export const Button = styled.button`
   border: 1px solid black;
   border-radius: 8px;
   font-size: 24px;
+  background-color: blue;
+  color: white;
+  &:hover {
+    background-color: skyblue;
+  }
 `;
